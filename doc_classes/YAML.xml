@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<class name="YAML" inherits="RefCounted" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://raw.githubusercontent.com/godotengine/godot/master/doc/class.xsd">
+	<brief_description>
+		Helper class for parsing YAML data.
+	</brief_description>
+	<description>
+		YAML class allows for parsing YAML strings and files. The data is converted to Godot's [Variant] types using [method @GlobalScope.str_to_var], which means that it supports deserializing of all native Godot types.
+	</description>
+	<tutorials>
+	</tutorials>
+	<methods>
+		<method name="parse_file" qualifiers="static">
+			<return type="Variant" />
+			<param index="0" name="path" type="String" />
+			<description>
+				Loads the given file as text and runs [method parse_string]. If the file can't be read, returns [code]null[/code].
+			</description>
+		</method>
+		<method name="parse_string" qualifiers="static">
+			<return type="Variant" />
+			<param index="0" name="string" type="String" />
+			<description>
+				Parses the given YAML string and returns the result. If there are parsing errors, they are printed to the console and the method returns [code]null[/code].
+			</description>
+		</method>
+	</methods>
+</class>
