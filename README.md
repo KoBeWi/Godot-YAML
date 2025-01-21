@@ -19,10 +19,11 @@ var string = """
 - 3
 """
 print(YAML.parse_string(string)) # Prints "[1, 2, 3]".
+```
 
 The extension is able to load Godot's native types, like Vector2. However, since YAML does not support Godot type syntax, you need to enclose them in quotes.
 
-```GDScript`
+```GDScript
 var string = """
 "Vector2i(0, 0)": Epicenter
 "Vector2i(1, 0)": Eastern Corridor
