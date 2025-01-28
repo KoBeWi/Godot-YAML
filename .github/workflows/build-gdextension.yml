@@ -121,11 +121,13 @@ jobs:
       - name: Prepare artifact
         shell: sh
         run: |
+          cd bin
+          rm -rf *.exp *.lib
+          cd ..
+
           mkdir -p project/addons/YAML/bin
           mkdir -p project/addons/YAML/icons
           mv bin/* project/addons/YAML/bin
-
-          rm -rf *.exp *.lib
 
           cp -n 'YAML.gdextension' project/addons/YAML
           cp -n 'icons/YAML.svg' 'icons/YAML.svg.import' project/addons/YAML/icons
