@@ -125,12 +125,6 @@ jobs:
           mkdir -p project/addons/YAML/icons
           mv bin/* project/addons/YAML/bin
 
-          mv *.x86_64.so linux64/ || true
-          mv *.framework osx/ || true
-          mv *.x86_64.dll win64/ || true
-          rm -rf *.exp *.lib
-          cd ../../..
-
           cp -n 'YAML.gdextension' project/addons/YAML
           cp -n 'icons/YAML.svg' 'icons/YAML.svg.import' project/addons/YAML/icons
 
