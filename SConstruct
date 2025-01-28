@@ -14,6 +14,8 @@ bin_path = "bin/"
 extension_name = "YAML"
 debug_or_release = "release" if env["target"] == "template_release" else "debug"
 
+env.Append(CCFLAGS=["-fexceptions"])
+
 if not "arch_suffix" in env:
     env["arch_suffix"] = env["arch"]
 

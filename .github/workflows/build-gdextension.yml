@@ -123,10 +123,6 @@ jobs:
         run: |
           mkdir -p project/addons/YAML
           mv bin/* project/addons/YAML
-          
-          touch linux64/.gdignore
-          touch osx/.gdignore
-          touch win64/.gdignore
 
           mv *.x86_64.so linux64/ || true
           mv *.framework osx/ || true
