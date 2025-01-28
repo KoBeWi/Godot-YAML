@@ -1,5 +1,5 @@
 on:
-  workflow_call:
+  workflow_dispatch:
     inputs:
       godot_cpp_version:
         required: false
